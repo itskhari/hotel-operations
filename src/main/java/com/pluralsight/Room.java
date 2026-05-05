@@ -22,16 +22,20 @@ public class Room {
     public double getPrice() {
         return price;
     }
-
-    public boolean isOccupied() {
-        return occupied;
-    }
-
-    public boolean isDirty() {
-        return dirty;
-    }
-
     public boolean isAvailable() {
-        return available;
+        return !occupied && !dirty;
     }
+    public void checkIn() {
+        occupied = true;
+        dirty = true;
+    }
+    public void checkOut() {
+        occupied = false;
+        dirty = true;
+    }
+    public void cleanRoom() {
+        dirty = false;
+    }
+
+
 }
