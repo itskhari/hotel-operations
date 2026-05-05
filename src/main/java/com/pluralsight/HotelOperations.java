@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class HotelOperations {
     public static void main(String[] args) {
-        Employee e = new Employee(1, "John", "Front Desk", 20.00, 37);
+        Employee e = new Employee(1, "John", "Front Desk", 20, 0);
 
-        e.punchIn(9);   // 9 AM
-        e.punchOut(17); // 5 PM
+        e.punchIn();
+        e.punchOut(20);
 
-        System.out.println("Hours worked: " + e.getHoursWorked()); // 8
-        System.out.println("Regular hours: " + e.getRegularHours()); // 8
-        System.out.println("Overtime hours: " + e.getOvertimeHours()); // 0
+        System.out.println("Hours worked: " + e.getHoursWorked());
     }
 }
